@@ -1,0 +1,17 @@
+name: Merge Notification
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Send notification
+        run: echo "🚀 A pull request has been merged into main!"
