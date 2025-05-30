@@ -1,0 +1,14 @@
+name: Commit Notification
+
+on:
+  push:
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Send commit notification
+        run: echo "📝 A new commit has been pushed!"
