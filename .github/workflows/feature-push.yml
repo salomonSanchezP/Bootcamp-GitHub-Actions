@@ -1,0 +1,11 @@
+name: Feature Push Notification
+on:
+  push:
+    branches:
+      - 'feature/*' # Coincide con cualquier rama que empiece con "feature/"
+    jobs:
+      notify:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Notify Feature Push
+            run: echo "🚀 A push has been made to the branch"
